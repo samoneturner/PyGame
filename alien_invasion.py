@@ -49,6 +49,10 @@ class AlienInvasion:
 
         self._update_screen()
 
+        # Check for any bullets that have hit aliens.
+        # If so, get rid of the bullet and the alien.
+        collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
+
     def _create_alien(self, alien_number, row_number):
         # Create an alien and place it in the row.
         alien = Alien(self)
