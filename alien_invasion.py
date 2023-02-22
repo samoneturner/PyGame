@@ -109,6 +109,7 @@ class AlienInvasion:
         for alien_number in range(number_aliens_x):
             # Create an alien and place it in the row.
             alien = Alien(self)
+            alien_width = alien.rect.width
             alien.x = alien_width + 2 * alien_width * alien_number
             alien.rect.x = alien.x
             self.aliens.add(alien)
